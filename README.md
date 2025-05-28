@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/bccb3861-617a-427a-bde9-b75fcb3f1150)# FaceID - Real-time Facial Recognition Platform
+# FaceID - Real-time Facial Recognition Platform
 
 # Demo Video use this link
 https://drive.google.com/file/d/1AafVX6-nNZ8u4otWIoC8wgaSozumPYEe/view?usp=sharing
@@ -155,18 +155,23 @@ The intelligent chat interface can answer queries such as:
 - Streaming processing for real-time operations
 
 # Output Registration
+
 ![image](https://github.com/user-attachments/assets/89d626e1-7aac-4f70-beef-aab4dbdc5986)
 
 # Face Detection 
+
 ![image](https://github.com/user-attachments/assets/7d0e20d5-d171-4ba9-9994-53b5099140b8)
 
 # simillarity check 
+
 ![image](https://github.com/user-attachments/assets/8c1c5a58-0c68-4555-abda-3a0def266b26)
 
 # registered Faces
+
 ![image](https://github.com/user-attachments/assets/cf8ffa75-acb3-4eb9-86cc-0dc26fece453)
 
 # RAG MODEL Answerin System
+
 ![image](https://github.com/user-attachments/assets/5c39e50a-eede-40cd-b160-e486405c0fc3)
 
 
