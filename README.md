@@ -1,12 +1,10 @@
-# FaceID - Real-time Facial Recognition Platform
+![image](https://github.com/user-attachments/assets/bccb3861-617a-427a-bde9-b75fcb3f1150)# FaceID - Real-time Facial Recognition Platform
 
 # Demo Video use this link
 https://drive.google.com/file/d/1AafVX6-nNZ8u4otWIoC8wgaSozumPYEe/view?usp=sharing
 
 
 **Developed by: Vignesh Pandiya G**
-
-A comprehensive browser-based facial recognition platform that enables users to register faces, perform real-time recognition, and interact with an intelligent chat interface powered by RAG (Retrieval-Augmented Generation) technology.
 
 ## 🚀 Features
 
@@ -92,28 +90,6 @@ pip install dlib
 pip install huggingface-hub
 ```
 
-### 4. Setup MongoDB
-```bash
-# Install MongoDB Community Edition
-# Start MongoDB service
-mongod --dbpath /path/to/your/db
-```
-
-### 5. Environment Configuration
-Create a `.env` file in the project root:
-```env
-HF_TOKEN=your_huggingface_token_here
-MONGODB_URI=mongodb://localhost:27017/
-```
-
-### 6. Install Additional Requirements (if needed)
-```bash
-# For GPU acceleration (optional)
-pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
-
-# For dlib with CUDA support (optional)
-# Follow dlib installation guide for CUDA support
-```
 
 ## 🚀 Running the Application
 
@@ -122,51 +98,11 @@ pip install torch torchvision torchaudio --index-url https://download.pytorch.or
 mongod --dbpath /path/to/your/database
 ```
 
-### 2. Run the Flask Backend
+### 2. Run the Node Backend
 ```bash
 python app.py
 ```
 
-The server will start on `http://localhost:5000`
-
-### 3. Available Endpoints
-
-#### REST API Endpoints
-- `POST /api/register` - Register a new face
-- `POST /api/recognize` - Recognize faces in an image
-- `POST /api/query` - Query the RAG system
-- `POST /api/delete` - Delete a registered face
-- `GET /api/faces` - Get all registered faces
-- `GET /api/health` - System health check
-
-#### WebSocket Events
-- `registerFace` - Register face via WebSocket
-- `recognizeFace` - Recognize face via WebSocket
-- `query` - Query RAG system via WebSocket
-- `deleteFace` - Delete face via WebSocket
-
-## 📝 API Usage Examples
-
-### Register a Face
-```bash
-curl -X POST http://localhost:5000/api/register \
-  -F "name=John Doe" \
-  -F "image=@face_image.jpg"
-```
-
-### Recognize Faces
-```bash
-curl -X POST http://localhost:5000/api/recognize \
-  -H "Content-Type: application/json" \
-  -d '{"image": "data:image/jpeg;base64,<base64_encoded_image>"}'
-```
-
-### Query RAG System
-```bash
-curl -X POST http://localhost:5000/api/query \
-  -H "Content-Type: application/json" \
-  -d '{"prompt": "Who was the last person registered?"}'
-```
 
 ## 🧠 RAG System Capabilities
 
@@ -218,71 +154,20 @@ The intelligent chat interface can answer queries such as:
 - Efficient vector storage with FAISS
 - Streaming processing for real-time operations
 
-## 🐛 Troubleshooting
+# Output Registration
+![image](https://github.com/user-attachments/assets/89d626e1-7aac-4f70-beef-aab4dbdc5986)
 
-### Common Issues
+# Face Detection 
+![image](https://github.com/user-attachments/assets/7d0e20d5-d171-4ba9-9994-53b5099140b8)
 
-1. **CUDA Not Available**
-   - Install CUDA toolkit and cuDNN
-   - Verify GPU compatibility
-   - Fallback to CPU processing automatically
+# simillarity check 
+![image](https://github.com/user-attachments/assets/8c1c5a58-0c68-4555-abda-3a0def266b26)
 
-2. **MongoDB Connection Error**
-   - Ensure MongoDB service is running
-   - Check connection string in environment variables
-   - Verify database permissions
+# registered Faces
+![image](https://github.com/user-attachments/assets/cf8ffa75-acb3-4eb9-86cc-0dc26fece453)
 
-3. **Face Recognition Accuracy**
-   - Ensure good lighting conditions
-   - Use high-resolution images
-   - Adjust recognition threshold if needed
+# RAG MODEL Answerin System
+![image](https://github.com/user-attachments/assets/5c39e50a-eede-40cd-b160-e486405c0fc3)
 
-4. **RAG System Not Responding**
-   - Check HuggingFace token validity
-   - Verify model downloads completed
-   - Monitor memory usage during inference
-
-### Logging
-- Application logs are stored in `app.log`
-- Set logging level to DEBUG for detailed information
-- Monitor WebSocket connections in browser console
-
-## 🔒 Security Considerations
-
-- Face encodings are stored as numerical vectors (not images)
-- Input validation for all API endpoints
-- CORS protection configured
-- WebSocket origin validation
-- No raw image storage in database
-
-## 📈 Future Enhancements
-
-- [ ] Multi-camera support
-- [ ] Advanced emotion detection
-- [ ] Cloud deployment with Docker
-- [ ] Enhanced RAG with external knowledge bases
-- [ ] Mobile app integration
-- [ ] Advanced analytics dashboard
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add tests if applicable
-5. Submit a pull request
-
-## 📄 License
-
-This project is developed by **Vignesh Pandiya G** for educational and demonstration purposes.
-
-## 📞 Support
-
-For issues or questions:
-- Check the troubleshooting section
-- Review application logs
-- Create an issue in the repository
-
----
 
 **Developed with ❤️ by Vignesh Pandiya G**
